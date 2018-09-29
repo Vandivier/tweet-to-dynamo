@@ -23,3 +23,7 @@ Just remember. Serverless is cost-efficient, not simple.
     b. You will need to create an IAM user. Just give it programmatic access permission. I called mine `app-s3-tweet-to-dynamo`. Give that user the permission `AmazonS3FullAccess`.
 
 5. Drag the content of the S3 folder from the repo and drop in the right pane of the S3 Browser GUI for the new S3 account you just added. Then visit the bucket's public URL to see the home page!
+
+# About
+
+Built with React 16 + MOBX via `create-react-app` ejection. More info [here](https://swizec.com/blog/mobx-with-create-react-app/swizec/7158).
