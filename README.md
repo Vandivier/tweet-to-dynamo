@@ -27,3 +27,7 @@ Just remember. Serverless is cost-efficient, not simple.
 # About
 
 Built with React 16 + MOBX via `create-react-app` ejection. More info [here](https://swizec.com/blog/mobx-with-create-react-app/swizec/7158).
+
+# Miscellaneous Notes and Links
+
+1. [Adding SCSS](https://medium.com/@oreofeolurin/configuring-scss-with-react-create-react-app-1f563f862724)
