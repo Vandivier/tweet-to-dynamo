@@ -52,6 +52,10 @@ class App extends Component {
         });
     }
 
+    async fHandleTwitterUsernameSubmission(e) {
+        alert('test')
+    }
+
   render() {
     return (
       <div className="App">
@@ -67,17 +71,17 @@ class App extends Component {
             <p className="App-intro">
                 Enter in a Twitter username and submit to get that user's latest tweet!
             </p>
-            <Form className="row">
+            <Form className="row" onSubmit={e => this.fHandleTwitterUsernameSubmission(e)} >
                     <div className="offset-4" />
-                    <input className="col-3"
+                    <input className="col-2"
                         name="sTwitterUsername"
                         onChange={e => this.fHandleChange(e)}
                         placeholder="Twitter Username"
                         type="text"
                         value={this.state.sTwitterUsername}
                     />
-                    <Button className="col-1" style={{ marginLeft: 20 }} type="submit">
-                        <span className="icon ion-md-log-out mr-1" /> Get Last Tweet
+                    <Button className="col-2" style={{ marginLeft: 20 }} type="submit">
+                        <span className="icon ion-md-log-out mr-1" /> Get Latest Tweet
                     </Button>
             </Form>
         </Jumbotron>
