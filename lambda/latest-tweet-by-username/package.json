@@ -1,0 +1,6 @@
+{
+  "name": "latest-tweet-by-username",
+  "dependencies": {
+    "aws-sdk": "^2.325.0"
+  }
+}
