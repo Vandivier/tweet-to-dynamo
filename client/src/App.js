@@ -67,9 +67,9 @@ class App extends Component {
             }
         });
 
-        if (!oResult.errorMessage) {
+        if (oResult.sLatestTweetText) {
             this.setState({
-                sLatestTweetText: JSON.parse(oResult.result)[0].text,
+                sLatestTweetText: oResult.sLatestTweetText,
             });
         } else { 
             this.setState({

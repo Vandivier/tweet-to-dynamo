@@ -30,6 +30,8 @@ Just remember. Serverless is cost-efficient, not simple.
 
 6. Create a Dynamo instance
 
+    a. I named my table `dynamo-s3-tweet-to-dynamo`. I used Primary Key `idTweet` as a number.
+
 7. Create a new Labda script
 
     a. Call it getLatestTweetByUsername, set runtime to Node.js v8.10, add role `role-app-s3-tweet-to-dynamo`, and upload the zip in the appropriate lambda folder.
@@ -61,3 +63,4 @@ Built with React 16 + MOBX via `create-react-app` ejection. More info [here](htt
 1. [Adding SCSS](https://medium.com/@oreofeolurin/configuring-scss-with-react-create-react-app-1f563f862724)
 2. [Get latest tweet API endpoint](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline)
 3. Node, Lambda, and [Twitter OAuth](https://github.com/ciaranj/node-oauth/wiki/Interacting-with-Twitter).
+4. Generating [DynamoDB secrets](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SettingUp.DynamoWebService.html#SettingUp.DynamoWebService.GetCredentials)
