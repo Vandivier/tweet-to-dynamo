@@ -40,6 +40,8 @@ Just remember. Serverless is cost-efficient, not simple.
 
 8. Create a new [Twitter App](https://developer.twitter.com)
 
+    a. In your Lambda function, add these environmental variables from the Twitter App: [consumer_key, consumer_secret, access_token, access_token_secret]
+
 9. Create a new AWS API Gateway. Name the API `gateway-app-s3-tweet-to-dynamo`.
 
     a. Link create a POST endpoint method on a resource called `/tweet` and link it to your `getLatestTweetByUsername` Lambda.
@@ -58,3 +60,4 @@ Built with React 16 + MOBX via `create-react-app` ejection. More info [here](htt
 
 1. [Adding SCSS](https://medium.com/@oreofeolurin/configuring-scss-with-react-create-react-app-1f563f862724)
 2. [Get latest tweet API endpoint](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline)
+3. Node, Lambda, and [Twitter OAuth](https://github.com/ciaranj/node-oauth/wiki/Interacting-with-Twitter).
