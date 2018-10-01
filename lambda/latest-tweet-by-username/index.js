@@ -3,9 +3,7 @@ const AWS = require('aws-sdk');
 exports.handler = async (event, context, callback) => {
     const response = {
         statusCode: 200,
-        body: {
-            result: JSON.stringify('Hello from Lambda! This is tweet-to-dynamo test.')
-        }
+        result: JSON.stringify('Hello from Lambda! This is tweet-to-dynamo test.')
     };
     const sTwitterUsername = event.sTwitterUsername;
 
