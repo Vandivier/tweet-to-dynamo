@@ -42,11 +42,13 @@ Just remember. Serverless is cost-efficient, not simple.
 
 9. Create a new AWS API Gateway. Name the API `gateway-app-s3-tweet-to-dynamo`.
 
-    a. Link create a GET request on a resource called `/tweet` and link it to your `getLatestTweetByUsername` Lambda.
+    a. Link create a POST endpoint method on a resource called `/tweet` and link it to your `getLatestTweetByUsername` Lambda.
 
-    b. Deploy your API to a stage called `test`. You should be able to access the tweet endpoint at something like `https://315xhau95d.execute-api.us-east-1.amazonaws.com/test/tweet`.
+    b. Enable CORS on `/tweet`. I used a Access-Control-Allow-Origin value of '*localhost*'.
 
-    c. If you intend to go to PROD, modify the app as needed with your new stage name.
+    c. Deploy your API to a stage called `test`. You should be able to access the tweet endpoint at something like `https://315xhau95d.execute-api.us-east-1.amazonaws.com/test/tweet`.
+
+    d. If you intend to go to PROD, modify the app as needed with your new stage name.
 
 # About
 

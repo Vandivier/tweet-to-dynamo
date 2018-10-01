@@ -1,0 +1,54 @@
+---
+swagger: "2.0"
+info:
+  version: "2018-10-01T04:06:43Z"
+  title: "gateway-app-s3-tweet-to-dynamo"
+host: "315xhau95d.execute-api.us-east-1.amazonaws.com"
+basePath: "/test"
+schemes:
+- "https"
+paths:
+  /tweet:
+    get:
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+    post:
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+definitions:
+  Empty:
+    type: "object"
+    title: "Empty Schema"

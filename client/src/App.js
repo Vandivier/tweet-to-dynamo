@@ -11,6 +11,8 @@ import {
     Jumbotron,
 } from 'reactstrap';
 
+import { ServiceBaseService } from './services/service-base/service-base.service';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -19,9 +21,12 @@ class App extends Component {
             sTwitterUsername: '',
         };
 
+        this.mBaseService = new ServiceBaseService();
+
         // TODO: can we .bind(this) when passing in component?
         this.fHandleArrayChange = this.fHandleArrayChange.bind(this);
         this.fHandleChange = this.fHandleChange.bind(this);
+        this.fHandleTwitterUsernameSubmission = this.fHandleTwitterUsernameSubmission.bind(this);
     }
 
     // currently, can only handle changing one property on an object
@@ -53,7 +58,18 @@ class App extends Component {
     }
 
     async fHandleTwitterUsernameSubmission(e) {
-        alert('test')
+        e.preventDefault()
+
+        const oResult = await this.mBaseService.fpPost('tweet', {
+            bAsRawResponse: true,
+            oRequestBody: {
+                sTwitterUsername: this.state.sTwitterUsername,
+            }
+        });
+
+        this.setState({
+            sLatestTweetText: oResult.result,
+        });
     }
 
   render() {
