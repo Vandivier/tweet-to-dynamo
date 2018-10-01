@@ -55,6 +55,7 @@
   "scripts": {
     "start": "set PORT=3100 && node scripts/start.js",
     "build": "node scripts/build.js",
+    "test-with-coverage": "node scripts/test.js --env=jsdom --coverage",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -101,5 +102,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "react-test-renderer": "^16.5.2"
   }
 }

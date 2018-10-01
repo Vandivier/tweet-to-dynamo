@@ -26,7 +26,7 @@ Just remember. Serverless is cost-efficient, not simple.
 
     d. Also create IAM role `role-app-s3-tweet-to-dynamo` and give it the same policies.
 
-5. Drag the content of the S3 folder from the repo and drop in the right pane of the S3 Browser GUI for the new S3 account you just added. Then visit the bucket's public URL to see the home page!
+5. Build the React client normally and drag the content of the output folder from into the right pane of the S3 Browser GUI for the new S3 account you just added. Then visit the bucket's public URL to see the home page!
 
 6. Create a Dynamo instance
 
@@ -64,3 +64,4 @@ Built with React 16 + MOBX via `create-react-app` ejection. More info [here](htt
 2. [Get latest tweet API endpoint](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline)
 3. Node, Lambda, and [Twitter OAuth](https://github.com/ciaranj/node-oauth/wiki/Interacting-with-Twitter).
 4. Generating [DynamoDB secrets](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SettingUp.DynamoWebService.html#SettingUp.DynamoWebService.GetCredentials)
+5. Event simulation with [Enzyme](https://medium.com/wehkamp-techblog/unit-testing-your-react-application-with-jest-and-enzyme-81c5545cee45) to compliment Jest unit testing.

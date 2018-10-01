@@ -108,7 +108,7 @@ class App extends Component {
             </Form>
         </Jumbotron>
 
-        <p>
+        <p id="twitter-username-output">
             Last tweet taken from Twitter user: { this.state.sTwitterUsername }
         </p>
         <p>
